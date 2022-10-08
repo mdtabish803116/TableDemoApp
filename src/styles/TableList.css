@@ -1,0 +1,18 @@
+
+table thead th {
+    border : 2px solid white;
+    text-align : center;
+}
+
+table thead {
+    height : 60px
+}
+
+
+
+table{
+     width : 100%;
+     border-collapse: collapse;
+
+     
+}
