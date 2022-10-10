@@ -1,33 +1,19 @@
 import React from "react"
-import TableList from "./TableList"
+import TableList1 from "./TableList1"
+import TableList2 from "./TableList2"
 
-const Table = () => {
+const Table = (data) => {
 
-      const [data , setData] = React.useState([])
-
-      const getData = () => {
-        fetch(`http://localhost:3000/data ` , {
-        }).then((res) => res.json())
-          .then((res) => setData(res))
-          .catch((err) => console.log(err));
-    
-    }
-    
-    React.useEffect(() => {
-        getData();
-    } , [])
-    
-     data.sort((a , b) => {
-          return a.Time_Slot - b.Time_Slot
-     })
-    
+     const {data1} = data
+     const {data2} = data
 
     return (
           <div style = {{
               width : "60%",
               marginRight : "10%"
-          }}>
-                <TableList data = {data}/>
+          }}>{
+              data1 ? (<TableList1 data = {data1}/>) : (<TableList2 data = {data2}/>)
+          }     
           </div>
     )
 }

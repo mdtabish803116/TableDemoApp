@@ -20,7 +20,7 @@ const Row = styled.tr`
 
 
 
-const TableList = ({data}) => {
+const TableList2 = ({data}) => {
 
 
       const timeSlots = [" " ,"09:00" , "10:00" , "11:00" , "12:00" , "13:00" , "14:00" , "15:00" ,
@@ -107,4 +107,4 @@ const TableList = ({data}) => {
         )
 }
 
-export default TableList
+export default TableList2

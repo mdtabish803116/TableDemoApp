@@ -1,27 +1,18 @@
+import PersonName from "./PersonName"
+import Table from "./Table"
 
+const Person = (data) => {
 
-
-const Person = () => {
-
-    let name =  "Alok kumar Gautam ( 43 ) (BDE) (NA)"
-
-      return (
+    return (
         <div style = {{
-            width : "25%",
-            display: "flex",
-            flexDirection : "row-reverse",
-
-            }}> 
-          <div style = {{
-               width : "200px",
-               textAlign: "center",
-               paddingTop : "25%"
-              
-          }}>  
-             {name}
-          </div>
+            display : "flex",
+            justifyContent : "space-around"
+        }}>
+             <PersonName data = {data}/>
+             <Table data = {data}/>
         </div>
-      )
-}
+    )
 
-export default Person
+    }
+    
+    export default Person
